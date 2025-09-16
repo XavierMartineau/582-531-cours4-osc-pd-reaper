@@ -13,9 +13,6 @@ MicroOscSlip<128> monOsc(&Serial);
 
 void setup()
 {
-  // Initialisation des LEDs
-  FastLED.addLeds<WS2812, 27, GRB>(&pixelAtom, 7);
-
   pinMode(MA_BROCHE_BOUTON, INPUT);
   Serial.begin(115200);
 }
@@ -29,10 +26,6 @@ void loop()
   // Lecture du bouton
   int maLectureBouton = digitalRead(MA_BROCHE_BOUTON);
   monOsc.sendInt("/Bouton", maLectureBouton);
-
-  // Animation simple : couleur verte qui change avec le temps
-  pixelAtom = CRGB(0, millis() % 256, 0); // Correction ici : utiliser pixelAtom, pas pixels
-  FastLED.show();
 
   delay(100); // Petite pause pour limiter la fréquence
 }
