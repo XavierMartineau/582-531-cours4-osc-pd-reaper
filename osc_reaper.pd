@@ -10,7 +10,7 @@
 #X obj 390 276 oscformat -f f master volume;
 #X floatatom 395 193 5 0 0 0 - - - 0;
 #X msg 445 220 0.5;
-#X obj 405 159 hsl 162 19 0 1 0 0 empty empty empty -2 -10 0 12 #606060 #000000 #000000 0 1;
+#X obj 399 163 hsl 162 19 0 1 0 0 empty empty empty -2 -10 0 12 #606060 #000000 #000000 0 1;
 #X obj 80 121 comport;
 #X msg 21 68 devices;
 #X obj 87 175 pdchoco/slip_parse;
@@ -21,6 +21,8 @@
 #X floatatom 192 371 5 0 0 0 - - - 0;
 #X obj 94 302 route Bouton angle;
 #X obj 58 388 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X msg 456 404 disconect;
+#X obj 155 114 select 0 1;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 0 0;
@@ -39,3 +41,4 @@
 #X connect 18 0 12 0;
 #X connect 20 0 21 0;
 #X connect 20 1 19 0;
+#X connect 22 0 0 0;
