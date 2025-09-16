@@ -1,7 +1,5 @@
 #include <Arduino.h>
 #include <MicroOscSlip.h>
-#include <FastLED.h>
-CRGB pixelAtom;
 
 #define MA_BROCHE_BOUTON 39
 #define MA_BROCHE_ANGLE 32
@@ -27,5 +25,5 @@ void loop()
   int maLectureBouton = digitalRead(MA_BROCHE_BOUTON);
   monOsc.sendInt("/Bouton", maLectureBouton);
 
-  delay(100); // Petite pause pour limiter la fréquence
+  delay(1000); // Petite pause pour limiter la fréquence
 }
