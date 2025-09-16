@@ -1,3 +1,6 @@
 #N canvas 690 222 858 635 12;
-#X obj 169 52 oscformat;
-#X obj 54 88 netsend -u -b;
+#X obj 101 55 oscformat;
+#X obj 112 192 netsend -u -b;
+#X msg 172 116 connect 127.0.0.1 8001;
+#X connect 0 0 1 0;
+#X connect 2 0 1 0;
